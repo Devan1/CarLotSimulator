@@ -28,8 +28,11 @@ namespace CarLotSimulator
             //At the end iterate through the list printing each of car's Year, Make, and Model to the console
 
             var chevy_impala = new Car(2012, "Chevy", "Impala", "Vroooooooom", "auuuuuuuggagaa", false);
+            CarLot.Cars.Add(chevy_impala);
             var toyota_tundra = new Car(2006, "Toyota", "Tundra", "brrrrrrr", "HONK,HONK", true);
+            CarLot.Cars.Add(toyota_tundra);
             var honda_civic = new Car(2019, "Honda", "Civic", "buzzzzzzzz", "beepbeep", true);
+            CarLot.Cars.Add(honda_civic);
             
             Console.WriteLine($"{chevy_impala.year}, {chevy_impala.make}, {chevy_impala.model}, {chevy_impala.isDriveable}");
             chevy_impala.MakeEngineNoise();
@@ -42,6 +45,13 @@ namespace CarLotSimulator
             Console.WriteLine($"{honda_civic.year}, {honda_civic.make}, {honda_civic.model}, {honda_civic.isDriveable}");
             honda_civic.MakeEngineNoise();
             honda_civic.MakeHonkNoise();
+
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars} ");
+
+            foreach (var car in CarLot.Cars)
+            {
+                Console.WriteLine($"Year: {car.year}\nMake: {car.make}\nMode: {car.model}\n");
+            }
         }
 
     }
