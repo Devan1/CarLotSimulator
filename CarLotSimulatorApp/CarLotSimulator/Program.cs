@@ -29,11 +29,14 @@ namespace CarLotSimulator
 
             var chevy_impala = new Car(2012, "Chevy", "Impala", "Vroooooooom", "auuuuuuuggagaa", false);
             CarLot.Cars.Add(chevy_impala);
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars} ");
             var toyota_tundra = new Car(2006, "Toyota", "Tundra", "brrrrrrr", "HONK,HONK", true);
             CarLot.Cars.Add(toyota_tundra);
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars} ");
             var honda_civic = new Car(2019, "Honda", "Civic", "buzzzzzzzz", "beepbeep", true);
             CarLot.Cars.Add(honda_civic);
-            
+            Console.WriteLine($"Number of cars created: {CarLot.numberOfCars} ");
+
             Console.WriteLine($"{chevy_impala.year}, {chevy_impala.make}, {chevy_impala.model}, {chevy_impala.isDriveable}");
             chevy_impala.MakeEngineNoise();
             chevy_impala.MakeHonkNoise();
